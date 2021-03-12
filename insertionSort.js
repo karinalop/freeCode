@@ -9,7 +9,15 @@ Instructions: Write a function insertionSort which takes an array of integers as
  and returns an array of these integers in sorted order from least to greatest. */
 
  function insertionSort(array) {
-    // Only change code below this line
+    for(let i = 0; i < array.length - 1; i++){
+        // if(array[i] > array[i + 1]){
+            for(let j = i; j >=0 && array[j] > array[j + 1]; j--){
+                let temp = array[j];
+                array[j] = array[j + 1];
+                array[j + 1] = temp;
+            }
+        // }        
+    }
     return array;
     // Only change code above this line
   }
